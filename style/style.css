@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 20rem;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button {
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  line-height: inherit;
+}
+
+/* Colors */
+/* --------------------------- */
+body {
+  color: hsl(234, 29%, 20%);
+  background: hsl(0, 0%, 100%);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+/* ------------------------ */
+.page-main {
+  position: relative;
+}
+
+.page-main__image {
+  margin-bottom: 2.8125rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-main__container {
+  background: hsl(0, 0%, 100%);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  max-width: 23.4375rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-main__content {
+  margin-bottom: 2.8125rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.625rem;
+  line-height: 1;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.content__text {
+  margin-bottom: 1.75rem;
+}
+
+.content__list-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 2.8125rem;
+}
+
+.icon__span {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.875rem;
+}
+
+.input__item {
+  margin-bottom: 1.5rem;
+}
+
+input[type=email] {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 0.5rem;
+  padding: 1.3125rem 1.5rem 1.125rem;
+}
+
+input[type=email]:focus,
+input[type=email]:focus-visible {
+  border-color: hsl(235, 18%, 26%);
+  box-shadow: 0 0 0.3125rem rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+input[type=email]:invalid {
+  border-color: hsl(4, 100%, 67%);
+}
+
+input::-moz-placeholder {
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+.submit__btn,
+.dismiss__btn {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.3125rem 1.5rem 1.125rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit__btn:hover,
+.dismiss__btn:hover {
+  background: linear-gradient(90deg, rgb(255, 83, 121) 0%, rgb(255, 103, 62) 100%);
+}
+
+/* ------------------------ */
+.success__message {
+  background: hsl(0, 0%, 100%);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  max-width: 23.4375rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16.625rem;
+}
+
+.success__icon {
+  margin-top: 9.3125rem;
+  margin-bottom: 2.75rem;
+}
+
+.bold_text {
+  font-weight: 700;
+}
+
+/* ------------------------ */
+.error_message {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 11.5rem;
+  left: 14.625rem;
+}
+
+.error {
+  display: none;
+}
+
+.input_border_error {
+  border: 1px solid red !important;
+}
+
+/* ------------------------ */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: #979bc2;
+}
+.attribution a {
+  color: hsl(231, 7%, 60%);
+}
+
+@media (min-width: 480px) {
+  body {
+    background: hsl(234, 29%, 20%);
+  }
+  .page-main__image {
+    max-width: 25rem;
+  }
+  .page-main__image img {
+    border-radius: 1rem;
+  }
+  .page-main__container {
+    padding: 1rem 1.5rem 0;
+    max-width: 26.0625rem;
+    border-radius: 1rem;
+    box-shadow: -0.125rem 0.1875rem 1.6875rem 0 #161619;
+    margin: 5% auto;
+  }
+  .error_message {
+    left: 17.375rem;
+  }
+  footer {
+    background: hsl(234, 29%, 20%);
+  }
+  .success__message {
+    padding: 1rem 1.5rem 0;
+    max-width: 26.0625rem;
+    border-radius: 1rem;
+    box-shadow: -0.125rem 0.1875rem 1.6875rem 0 #161619;
+    margin: 5% auto;
+    width: 31.375rem;
+    height: 32.4375rem;
+    flex-direction: column;
+    gap: 2.75rem;
+    padding: 3rem 4rem 4rem;
+  }
+  .success__message .dismiss__btn {
+    margin-bottom: 0;
+  }
+  .success__icon {
+    margin-top: 0;
+  }
+  .success__message__none {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  .page-main__container {
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    height: 39.875rem;
+    max-width: 54rem;
+    display: flex;
+    gap: 4rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  }
+  .success__message {
+    align-items: center;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3.375rem;
+    margin-bottom: 1.625rem;
+  }
+  .page-main__content {
+    max-width: 23.5rem;
+    margin-bottom: 0;
+  }
+  .main_img {
+    display: none;
+  }
+  .success__message__none {
+    display: none;
+  }
+  .page-main__image {
+    margin: 0;
+    width: 20rem;
+    height: 37.0625rem;
+    border-radius: 1rem;
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+  }
+  .submit__btn {
+    margin-bottom: 0;
+  }
+  .error_message {
+    left: 20.125rem;
+    bottom: 14.5rem;
+  }
+  .error {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .page-main__container {
+    max-width: 58rem;
+  }
+  .page-main__image {
+    width: 25rem;
+  }
+  .error {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
