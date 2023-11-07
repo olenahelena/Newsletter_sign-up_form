@@ -113,10 +113,6 @@ input[type="email"]:focus-visible {
     outline: none;
 }
 
-input[type="email"]:invalid {
-    border-color: $tomato;
-}
-
 input::placeholder {
     font-size: 1rem;
 }
@@ -151,7 +147,7 @@ input::placeholder {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16.625rem;
+    gap: 14.5rem;
 }
 
 .success__icon {
@@ -178,8 +174,9 @@ input::placeholder {
     display: none;
 }
 
-.input_border_error {
-    border: 1px solid red !important;
+input[type="email"].input_border_error {
+    border: 1px solid $tomato;
+    background: hsla(5, 100%, 95%, 1);
 }
 
 /* ------------------------ */
@@ -194,7 +191,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
     body {
         background: $Dark-Slate-Grey;
     }
@@ -234,10 +231,10 @@ input::placeholder {
         flex-direction: column;
         gap: 2.75rem;
         padding: 3rem 4rem 4rem;
+    }
 
-        .dismiss__btn {
-            margin-bottom: 0;
-        }
+    .dismiss__btn {
+        margin-bottom: 0;
     }
 
     .success__icon {
@@ -249,7 +246,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25em) {
     .page-main__container {
         padding: 1.5rem 1.5rem 1.5rem 4rem;
         height: 39.875rem;
@@ -317,7 +314,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
     .page-main__container {
         max-width: 58rem;
     }

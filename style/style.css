@@ -169,10 +169,6 @@ input[type=email]:focus-visible {
   outline: none;
 }
 
-input[type=email]:invalid {
-  border-color: hsl(4, 100%, 67%);
-}
-
 input::-moz-placeholder {
   font-size: 1rem;
 }
@@ -210,7 +206,7 @@ input::placeholder {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16.625rem;
+  gap: 14.5rem;
 }
 
 .success__icon {
@@ -236,8 +232,9 @@ input::placeholder {
   display: none;
 }
 
-.input_border_error {
-  border: 1px solid red !important;
+input[type=email].input_border_error {
+  border: 1px solid hsl(4, 100%, 67%);
+  background: hsl(5, 100%, 95%);
 }
 
 /* ------------------------ */
@@ -250,7 +247,7 @@ input::placeholder {
   color: hsl(231, 7%, 60%);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   body {
     background: hsl(234, 29%, 20%);
   }
@@ -285,7 +282,7 @@ input::placeholder {
     gap: 2.75rem;
     padding: 3rem 4rem 4rem;
   }
-  .success__message .dismiss__btn {
+  .dismiss__btn {
     margin-bottom: 0;
   }
   .success__icon {
@@ -295,7 +292,7 @@ input::placeholder {
     display: none;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 56.25em) {
   .page-main__container {
     padding: 1.5rem 1.5rem 1.5rem 4rem;
     height: 39.875rem;
@@ -353,7 +350,7 @@ input::placeholder {
     display: none;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
   .page-main__container {
     max-width: 58rem;
   }
